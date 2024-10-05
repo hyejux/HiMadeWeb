@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/AdminLayout.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/admin-reserve.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/admin-reserve-detail.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/admin-reserve-mange.css"/>
+</head>
+<body>
+  
+<div class='mainBox'>
+  <div class="sidebar">
+      <logo class="logo"> HiMade !</logo>
+      <a href="./customer.do"> 메인 </a>
+      <a href="./product.do"> 가게 관리 </a>
+      <a href="./price.do"> [d] 예약 설정 </a>
+      <a href="./price.do"> [d] 예약 관리 </a>
+      <a href="./order.do"> 통계 관리 </a>
+      <a href="./price.do"> 고객 관리 </a>
+      <a href="./price.do"> 문의 관리 </a>
+
+  </div>
+<!-- btn-st -->
+  <div class="main-container">
+      <div class="main-nav">
+          <div class="icon-box">
+              <!--부트스트랩 아이콘 활용, 추후에 경로 수정해야 함-->
+            
+          </div>
+
+          <div class="user-profile">
+
+              <div class="user-profile-info">
+                  <div class="user-profile-box">
+                      팬케이크샵 가로수길점  
+                  </div>
+                  <div class="user-profile-buttons">
+
+                      <button type="button" class="user-profile-button user-mypage-button" onclick="location.href='./myPage.do'">마이 페이지</button>
+                      <button type="button" class="user-profile-button user-logout-button" onclick="location.href='./logout'">로그아웃</button>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+    <div class="main-content">
+        <div class="main-content-title"> 
+            예약 수정
+        </div>
+        <div class="main-option-btns">
+          <button type="button" class="btn-page-option"> 캘린더 </button>
+          <button type="button" class="btn-page-option"> 리스트 </button>
+        </div>
+        <div class="main-contents"> 
+        
+          <table id="detailedReservationTable">
+            <thead>
+              <tr>
+                <th>Reservation ID</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Customer Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Service</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 상세 예약 내역이 여기에 동적으로 추가됩니다 -->
+            </tbody>
+          </table>
+
+       </div>
+
+
+      
+
+
+    </div>
+
+  </div>
+
+ 
+
+<script>
+  const detailedReservationData = [
+  {
+    id: 'R001',
+    date: '2024-10-10',
+    time: '10:00 AM',
+    customerName: 'Alice',
+    phone: '010-1234-5678',
+    email: 'alice@example.com',
+    service: 'Haircut',
+    amount: '$50',
+    status: 'Confirmed'
+  },
+  {
+    id: 'R002',
+    date: '2024-10-11',
+    time: '12:00 PM',
+    customerName: 'Bob',
+    phone: '010-9876-5432',
+    email: 'bob@example.com',
+    service: 'Facial',
+    amount: '$70',
+    status: 'Pending'
+  },
+  {
+    id: 'R003',
+    date: '2024-10-12',
+    time: '03:00 PM',
+    customerName: 'Charlie',
+    phone: '010-1111-2222',
+    email: 'charlie@example.com',
+    service: 'Massage',
+    amount: '$100',
+    status: 'Cancelled'
+  },
+  {
+    id: 'R004',
+    date: '2024-10-13',
+    time: '09:00 AM',
+    customerName: 'David',
+    phone: '010-3333-4444',
+    email: 'david@example.com',
+    service: 'Manicure',
+    amount: '$30',
+    status: 'Confirmed'
+  }
+];
+
+// 테이블을 가져와서 동적으로 예약 리스트 추가
+function renderDetailedReservationTable() {
+  const tableBody = document.querySelector('#detailedReservationTable tbody');
+
+  // 예약 데이터를 순회하면서 각 행을 추가
+  detailedReservationData.forEach(reservation => {
+    const row = document.createElement('tr');
+
+    // 예약 번호
+    const idCell = document.createElement('td');
+    idCell.textContent = reservation.id;
+    row.appendChild(idCell);
+
+    // 날짜 셀
+    const dateCell = document.createElement('td');
+    dateCell.textContent = reservation.date;
+    row.appendChild(dateCell);
+
+    // 시간 셀
+    const timeCell = document.createElement('td');
+    timeCell.textContent = reservation.time;
+    row.appendChild(timeCell);
+
+    // 고객명 셀
+    const customerCell = document.createElement('td');
+    customerCell.textContent = reservation.customerName;
+    row.appendChild(customerCell);
+
+    // 전화번호 셀
+    const phoneCell = document.createElement('td');
+    phoneCell.textContent = reservation.phone;
+    phoneCell.classList.add('contact');
+    row.appendChild(phoneCell);
+
+    // 이메일 셀
+    const emailCell = document.createElement('td');
+    emailCell.textContent = reservation.email;
+    emailCell.classList.add('contact');
+    row.appendChild(emailCell);
+
+    // 서비스 항목 셀
+    const serviceCell = document.createElement('td');
+    serviceCell.textContent = reservation.service;
+    row.appendChild(serviceCell);
+
+    // 금액 셀
+    const amountCell = document.createElement('td');
+    amountCell.textContent = reservation.amount;
+    row.appendChild(amountCell);
+
+    // 상태 셀
+    const statusCell = document.createElement('td');
+    statusCell.textContent = reservation.status;
+    if (reservation.status === 'Confirmed') {
+      statusCell.classList.add('status-confirmed');
+    } else if (reservation.status === 'Pending') {
+      statusCell.classList.add('status-pending');
+    } else if (reservation.status === 'Cancelled') {
+      statusCell.classList.add('status-cancelled');
+    }
+    row.appendChild(statusCell);
+
+    // 테이블에 행 추가
+    tableBody.appendChild(row);
+  });
+}
+
+// 페이지가 로드될 때 예약 리스트를 렌더링
+document.addEventListener('DOMContentLoaded', renderDetailedReservationTable);
+
+    const calendar = document.getElementById('calendar');
+const currentMonthEl = document.getElementById('currentMonth');
+const selectedDateEl = document.getElementById('selectedDate');
+const eventListEl = document.getElementById('eventList');
+const eventTextInput = document.getElementById('eventText');
+const addEventButton = document.getElementById('addEvent');
+
+let currentDate = new Date();
+let events = {};
+
+// 달력 생성 함수
+function renderCalendar() {
+  // 현재 달력 초기화
+  calendar.innerHTML = '';
+
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+
+  currentMonthEl.textContent = `${year}-${month + 1}`;
+
+  // 해당 달의 첫 번째 날과 마지막 날
+  const firstDayOfMonth = new Date(year, month, 1).getDay();
+  const lastDateOfMonth = new Date(year, month + 1, 0).getDate();
+
+  // 이전 달의 빈 칸 채우기
+  for (let i = 0; i < firstDayOfMonth; i++) {
+    const emptyDay = document.createElement('div');
+    emptyDay.classList.add('day');
+    calendar.appendChild(emptyDay);
+  }
+
+  // 해당 달의 날짜 표시
+  for (let day = 1; day <= lastDateOfMonth; day++) {
+    const dayEl = document.createElement('div');
+    dayEl.classList.add('day');
+    dayEl.textContent = day;
+
+    const dateString = `${year}-${month + 1}-${day}`;
+    
+    // 해당 날짜에 일정이 있을 경우 표시
+    if (events[dateString]) {
+      const eventEl = document.createElement('div');
+      eventEl.classList.add('events');
+      eventEl.textContent = events[dateString].join(', ');
+      dayEl.appendChild(eventEl);
+    }
+
+    // 날짜 클릭 시 선택 처리
+    dayEl.addEventListener('click', () => {
+      selectedDateEl.textContent = dateString;
+    });
+
+    calendar.appendChild(dayEl);
+  }
+}
+
+// 이벤트 추가 함수
+function addEvent() {
+  const eventText = eventTextInput.value;
+  const selectedDate = selectedDateEl.textContent;
+
+  if (!eventText || selectedDate === 'None') {
+    alert('Please select a date and enter an event.');
+    return;
+  }
+
+  if (!events[selectedDate]) {
+    events[selectedDate] = [];
+  }
+
+  events[selectedDate].push(eventText);
+  eventTextInput.value = '';
+  renderCalendar();
+  displayEvents();
+}
+
+// 일정 목록 표시
+function displayEvents() {
+  eventListEl.innerHTML = '';
+  for (const [date, eventList] of Object.entries(events)) {
+    const eventItem = document.createElement('div');
+    eventItem.textContent = `${date}: ${eventList.join(', ')}`;
+    eventListEl.appendChild(eventItem);
+  }
+}
+
+// 이전 달로 이동
+document.getElementById('prevMonth').addEventListener('click', () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  renderCalendar();
+});
+
+// 다음 달로 이동
+document.getElementById('nextMonth').addEventListener('click', () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  renderCalendar();
+});
+
+// 이벤트 추가 버튼 클릭 시
+addEventButton.addEventListener('click', addEvent);
+
+// 초기 달력 렌더링
+renderCalendar();
+
+const reservationData = [
+  { date: '2024-10-10', time: '10:00 AM', customerName: 'Alice', status: 'Confirmed' },
+  { date: '2024-10-11', time: '12:00 PM', customerName: 'Bob', status: 'Pending' },
+  { date: '2024-10-12', time: '03:00 PM', customerName: 'Charlie', status: 'Cancelled' },
+  { date: '2024-10-13', time: '09:00 AM', customerName: 'David', status: 'Confirmed' },
+  { date: '2024-10-14', time: '11:30 AM', customerName: 'Eve', status: 'Pending' },
+  
+];
+
+// 테이블을 가져와서 동적으로 예약 리스트 추가
+function renderReservationTable() {
+  const tableBody = document.querySelector('#reservationTable tbody');
+  
+  // 예약 데이터를 순회하면서 각 행을 추가
+  reservationData.forEach(reservation => {
+    const row = document.createElement('tr');
+
+    // 날짜 셀
+    const dateCell = document.createElement('td');
+    dateCell.textContent = reservation.date;
+    row.appendChild(dateCell);
+
+    // 시간 셀
+    const timeCell = document.createElement('td');
+    timeCell.textContent = reservation.time;
+    row.appendChild(timeCell);
+
+    // 고객명 셀
+    const customerCell = document.createElement('td');
+    customerCell.textContent = reservation.customerName;
+    row.appendChild(customerCell);
+
+    // 상태 셀
+    const statusCell = document.createElement('td');
+    statusCell.textContent = reservation.status;
+    if (reservation.status === 'Confirmed') {
+      statusCell.classList.add('status-confirmed');
+    } else if (reservation.status === 'Pending') {
+      statusCell.classList.add('status-pending');
+    } else if (reservation.status === 'Cancelled') {
+      statusCell.classList.add('status-cancelled');
+    }
+    row.appendChild(statusCell);
+
+    // 테이블에 행 추가
+    tableBody.appendChild(row);
+  });
+}
+
+// 페이지가 로드될 때 예약 리스트를 렌더링
+document.addEventListener('DOMContentLoaded', renderReservationTable);
+
+
+</script>
+
+</body>
+</html>

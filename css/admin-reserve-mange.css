@@ -1,0 +1,148 @@
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+
+  .day {
+    width: 50px;
+    height: 50px;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .day:hover {
+    background-color: #b2ebf2;
+    cursor: pointer;
+  }
+
+  .events {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 15px;
+    color: #00796b;
+  }
+
+  .controls {
+    margin: 10px 0;
+  }
+  
+  .event-form {
+    margin-top: 3px;
+  }
+
+  .event-list {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #eceff1;
+  }
+  /* ------------------------------ 캘린더 css 추후 변경 예정 react-calender로 */
+
+  .main-contents {
+    border: 1px solid rgb(92, 92, 92);
+    border-radius: 0px;
+    padding: 10px;
+    display: flex;
+    gap: 2%;
+  }
+
+  .reserve-manage-calendar-box{
+    width: 50%;
+    padding: 10px;
+    border: 1px solid red;
+  }
+  .reserve-manage-list {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid red;
+  }
+
+
+.main-option-btns{
+    display: flex;
+    justify-content: flex-end;
+}
+  .btn-page-option:nth-child(1){
+    border: 2px solid #1d2830;
+    color : #ffffff;
+    font-weight: bold;
+    background-color: #2e3133;
+  }
+
+  /* ------------------------------------ 예약 테이블 css 변경 예정 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f5f5f5;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .status-confirmed {
+    color: green;
+  }
+
+  .status-pending {
+    color: orange;
+  }
+
+  .status-cancelled {
+    color: red;
+  }
+
+
+  /* ---------------- t\ */
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+
+  th {
+    background-color: #f5f5f5;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .status-confirmed {
+    color: green;
+  }
+
+  .status-pending {
+    color: orange;
+  }
+
+  .status-cancelled {
+    color: red;
+  }
+
+  .contact {
+    font-size: 14px;
+    color: #555;
+  }
