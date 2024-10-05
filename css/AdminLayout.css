@@ -1,0 +1,178 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+
+.app-title {
+  border : 1px solid red;
+  color : red;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+    margin: 0;
+    padding: 0;
+      height: 100%;
+      width: 100%;
+}
+
+.logo {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+  .mainBox {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+  }
+
+.sidebar {
+  width: 220px;
+  background-color: #1d2830;
+  color: #ecf0f1;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  padding-left: 35px;
+
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.sidebar .bi-house-door-fill {
+  /*부트스트랩 아이콘 home 모양*/
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.sidebar .bi-house-door-fill:hover {
+  cursor: pointer;
+}
+
+.sidebar h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.sidebar a {
+  text-decoration: none;
+  color: #ecf0f1;
+  padding: 10px 0;
+  margin: 5px 0;
+  display: block;
+}
+.sidebar a:hover {
+  background-color: #6E7C85;
+}
+
+
+
+/* home 아이콘 때문에 아래부터 다 건드림 */
+.main-nav {
+  border-bottom: 1px solid #ddd;
+  background-color: #1d2830;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+/* 아이콘 감싼 박스 */
+.icon-box {
+  width: 32px;
+      margin-left: 30px;
+}
+
+/* 홈 아이콘 크기 */
+.icon-box > .home-icon {
+  font-size: 32px;
+  cursor: pointer;
+}
+
+
+.user-profile {
+  margin-top: 10px;
+  float: right;
+  width: 400px;
+
+
+}
+.user-profile-buttons {
+  display: flex;
+  width: 100%;
+    gap: 3%;
+ 
+}
+
+
+.user-profile-box {
+  /*홍길동 님*/
+  align-items: center;
+  color : #fff;
+  margin-right: 30px;
+  width: 100%;
+}
+
+.user-profile-button{
+  /*버튼*/
+  /*padding: 10px 16px;*/
+  border: 1px solid #1d2830;
+  background-color: #575e63;
+  color: white;
+  font-size: 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.user-mypage-button{
+  /*마이페이지 버튼*/
+  width: 100%;
+  height: 30px;
+  background-color: #6E7C85;
+  color: #ffffff;
+}
+.user-mypage-button:hover{
+  background-color: #2424245b;
+}
+
+
+.user-logout-button{
+  /*로그아웃 버튼*/
+  width: 100%;
+  height: 30px;
+}
+.user-logout-button:hover{
+  background-color: #2424245b;
+}
+
+.user-profile-info {
+  /*홍길동 님 + 버튼 2개 감싼 박스*/
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.user-profile-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 100px;
+  margin-right: 15px;
+}
+
+
+
+.main-container {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+#root {
+  margin: 20px 50px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="../css/AdminLayout.css"/>
+  <link rel="stylesheet" type="text/css" href="../css/admin-reserve.css"/>
+</head>
+<body>
+  
+<div class='mainBox'>
+  <div class="sidebar">
+      <logo class="logo"> HiMade !</logo>
+      <a href="./customer.do"> 메인 </a>
+      <a href="./product.do"> 가게 관리 </a>
+      <a href="./price.do"> [d] 예약 설정 </a>
+      <a href="./price.do"> [d] 예약 관리 </a>
+      <a href="./order.do"> 통계 관리 </a>
+      <a href="./price.do"> 고객 관리 </a>
+      <a href="./price.do"> 문의 관리 </a>
+
+  </div>
+<!-- btn-st -->
+  <div class="main-container">
+      <div class="main-nav">
+          <div class="icon-box">
+              <!--부트스트랩 아이콘 활용, 추후에 경로 수정해야 함-->
+              <i class="bi bi-house-door-fill home-icon" onclick="window.location.href='./main.do';"></i>
+          </div>
+
+          <div class="user-profile">
+
+              <div class="user-profile-info">
+                  <div class="user-profile-box">
+                      팬케이크샵 가로수길점  
+                  </div>
+                  <div class="user-profile-buttons">
+
+                      <button type="button" class="user-profile-button user-mypage-button" onclick="location.href='./myPage.do'">마이 페이지</button>
+                      <button type="button" class="user-profile-button user-logout-button" onclick="location.href='./logout'">로그아웃</button>
+                  </div>
+              </div>
+
+          </div>
+      </div>
+
+      <div class="main-content">
+        <div class="main-content-title"> 
+            예약 설정
+        </div>
+        <div class="main-btns">
+          <button type="button" class="btn-st"> 추가하기 </button>
+        </div>
+        <div class="main-contents"> 
+        
+       <div class="reserve-container">
+          <div class="reserve-img"> 
+            <img src="../img1.jpg"/> 
+          </div> 
+            <div class="reserve-content">
+              <div class="reserve-content-title"> 
+                <p> 미니 팬케이크  </p>
+                <button type="button" class="btn-st"> 수정하기 </button>
+
+              </div>
+              <div class="reserve-content-text"> 작은 선물용으로 좋은 미니 팬케이크 입니다.
+                다양한 옵션으로 주문가능합니다.</div>
+            </div>
+            
+       </div>
+      
+
+
+        </div>
+     </div>
+
+  </div>
+
+ 
+
+
+
+</body>
+</html>
