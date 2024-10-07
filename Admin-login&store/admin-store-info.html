@@ -3,18 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Store</title>
+    <title>가게 정보 </title>
 
     <link rel="stylesheet" type="text/css" href="../css/admin-store-info.css"/>
 </head>
 <body>
-    <div class="container">
-        <h1>My Store</h1>
+    <div class="admin-store-info-container">
+        <h1>가게 정보 </h1>
         
-        <div class="store-image">
-            <!-- 여기에 가게 이미지 추가 -->
-            <p>이미지 슬라이더 영역</p>
+        <div class="store-img-box">
+            <div class="store-image">
+                <img src="../img3.jpg" />
+            </div>
+            
+            <div class="store-image">
+                <img src="../img2.jpg" />
+            </div>
+            <div class="store-image">
+                <img src="../img5.jpg" />
+            </div>
+
         </div>
+       
 
         <div class="form-group">
             <label for="store-name">상호명</label>
@@ -61,40 +71,59 @@
         <div class="form-group">
             <label for="public">공개 여부</label>
             <div class="input-field radio-group">
-                <label><input type="radio" name="public" checked> 공개</label>
-                <label><input type="radio" name="public"> 비공개</label>
+             <input type="radio" name="public" checked disabled/> <span> 공개 </span>
+            <input type="radio" name="public" disabled/> <span> 비공개 </span>
             </div>
         </div>
 
         <div class="form-group">
             <label for="description">소개</label>
             <div class="input-field">
-                <textarea rows="4" readonly>해당 가게는 꽃을 전문적으로 판매하는 가게입니다. 다양한 꽃들을 합리적인 가격으로 제공하며, 고객 만족도를 높이기 위해 항상 최선을 다하고 있습니다.</textarea>
+                <textarea rows="4" readonly disabled style="resize: none;">해당 가게는 꽃을 전문적으로 판매하는 가게입니다. 다양한 꽃들을 합리적인 가격으로 제공하며, 고객 만족도를 높이기 위해 항상 최선을 다하고 있습니다.</textarea>
             </div>
         </div>
 
         <div class="form-group">
             <label for="parking">주차장 여부</label>
             <div class="input-field radio-group">
-                <label><input type="radio" name="parking" checked> O</label>
-                <label><input type="radio" name="parking"> X</label>
+                <label><input type="radio" name="parking" checked disabled> O</label>
+                <label><input type="radio" name="parking" disabled> X</label>
             </div>
         </div>
 
         <div class="form-group">
             <label for="hours">영업 시간</label>
             <div class="input-field hours-group">
-                <input type="time" value="09:00">
-                <input type="time" value="18:00">
-                <input type="time" value="12:00">
+                <div class="days-time-box"> 
+                    <span> 월요일 </span> <input type="time" value="09:00" disabled> ~  <input type="time" value="18:00" disabled>
+                </div>
+                <div class="days-time-box"> 
+                    <span> 화요일 </span> <input type="time" value="09:00" disabled> ~  <input type="time" value="18:00" disabled>
+                </div>
+                <div class="days-time-box"> 
+                    <span> 수요일 </span> <input type="time" value="09:00" disabled> ~  <input type="time" value="18:00" disabled>
+                </div>
+                <div class="days-time-box"> 
+                    <span> 목요일 </span> <input type="time" value="09:00" disabled> ~  <input type="time" value="18:00" disabled>
+                </div>
+                <div class="days-time-box"> 
+                    <span> 금요일 </span> <input type="time" value="09:00" disabled> ~  <input type="time" value="18:00" disabled> 
+                </div>
+                <div class="days-time-box"> 
+                    <span> 토요일 </span> <input type="time" value="09:00" disabled> ~  <input type="time" value="18:00" disabled>
+                </div>
+                <div class="days-time-box"> 
+                    <span> 일요일 </span> <input type="time" value="09:00" disabled> ~  <input type="time" value="18:00" disabled>
+                </div>
+                <!-- 브레이크 타임 ?? 라스트 오더 ??  -->
             </div>
         </div>
 
         <div class="form-group">
             <label for="sns">SNS 링크</label>
             <div class="input-field sns-links">
-                <input type="text" value="https://instagram.com/mystore" readonly>
-                <input type="text" value="https://facebook.com/mystore" readonly>
+                <input type="text" value="https://instagram.com/mystore" disabled readonly>
+                <input type="text" value="https://facebook.com/mystore" disabled readonly>
             </div>
         </div>
 
