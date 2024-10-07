@@ -147,4 +147,26 @@ body {
     margin-bottom: 10px;
   }
 
+  /* ---------------- */
   
+  /* 상단 버튼 디자인 */
+.user-top-btns  {
+  margin : 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-top-btns > button {
+  height: 30px;
+  width: 50px;
+  font-size: 25px;
+  background-color: #fff;
+  border: none;
+  
+}
+
+.user-main-content {
+  /* padding : 15px; */
+  margin-bottom: 100px;
+  /* border : 1px solid blue; */
+}
