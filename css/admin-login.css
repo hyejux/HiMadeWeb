@@ -1,0 +1,103 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+body {
+    font-family: 'Pretendard-Regular';
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.parts {
+    display: flex;
+    min-height: 100vh;
+}
+.part1 {
+    border:1px solid red;
+    width: 100%;
+    background-color: #000;
+}
+
+.part2 {
+    width: 100%;
+    /* border:1px solid red; */
+    background-color: #ddd;
+}
+
+.login-box {
+    /* border : 1px solid red; */
+}
+
+.login-container {
+    border : 1px solid #ddd;
+    border-radius: 10px;
+    padding: 50px 30px ;
+    margin: 0 auto;
+    width: 450px;
+    margin-top: 10%;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+
+.login-title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.login-box {
+    /* border : 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+.login-box >input {
+    height: 40px;
+    margin-bottom: 10px;    
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.find-msg {
+    text-align: right;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.login-container> button {
+    background-color: #727272;
+    border : 1px solid #ddd;
+    border-radius: 10px;
+    width: 50%;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+
+.singup-msg > span {
+    text-decoration: underline;
+}
+
+.part1 > div {
+    color : #fff;
+    font-size: 30px;
+}
