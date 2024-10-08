@@ -11,13 +11,11 @@
     font-weight: 400;
     font-style: normal;
   }
-
 body {
     font-family: 'Pretendard-Regular';
     margin: 0px;
     padding : 0px;
 }
-
 .user-top-nav {
     padding: 10px;
     text-align: center;
@@ -25,7 +23,6 @@ body {
     border-bottom: 1px solid #ddd;
     /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
 }
-
 .user-bottom-nav{
     position: fixed;
     bottom: 0;
@@ -40,7 +37,6 @@ body {
     font-weight: bold;
     /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); */
 }
-
 .user-bottom-nav a {
     color: #000;
     text-align: center;
@@ -48,7 +44,6 @@ body {
     font-size: 15px;
     flex: 1;
 }
-
 .user-bottom-nav a span {
     display: block;
     margin-top: 5px;
@@ -226,6 +221,7 @@ body {
     margin: 100px auto;
     background-color: white;
     padding: 20px;
+    text-align: center;
 }
 
 .user-account-find form {
@@ -235,59 +231,77 @@ body {
 
 .user-account-find-toggle {
     display: flex;
-
     margin-bottom: 50px;
+    width: 80%;
+    justify-content: center;
+    text-align: center;
 }
 .user-account-find-toggle > button {
-    width: 80%;
+    width: 60%;
     height: 60px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+    border: none;
     font-weight: bold;
-    font-size: 15px
-    
+    flex: 1;
 }
+
 .user-account-msg{ 
     text-align: center;
 
 }
 .user-account-find-toggle > button:nth-child(2) {
-    width: 80%;
+    width: 60%;
     height: 60px;
-    border: 1px solid #ddd;
-    background-color: #cecece;
+    border: none;
     font-weight: bold;
-    font-size: 15px
 }
 
+#find-id-btn {
+  font-size: 15px;
+  background-color: #4653C0;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
 
+#find-pw-btn {
+  font-size: 15px;
+  background-color: #E5E5EA;
+  color: #000;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
 .form-group {
     margin-bottom: 30px;
 }
-.form-group label {
+
+/* .form-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
-}
+} */
 
 .form-group input {
-    width: 100%;
+    width: 70%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    /* border-radius: 5px; */
     box-sizing: border-box;
 }
 
-.btn {
+.btn-findaccount {
     margin-top: 50px;
-    width: 100%;
+    width: 70%;
+    height: 50px;
     padding: 10px;
-    background-color: #555;
+    background: rgb(146,169,255);
+    background: linear-gradient(207deg, rgba(146,169,255,1) 0%, rgba(53,58,148,1) 100%);
     color: white;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+

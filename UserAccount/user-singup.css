@@ -228,43 +228,82 @@ body {
   .singup-container {
     background-color: white;
     padding: 20px;
-    
 }
 
 h2 {
     text-align: center;
     margin: 0;
+    margin-top: 2cap;
     margin-bottom: 50px;
+    font-size: 40px;
 }
+
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-group {
     margin-bottom: 15px;
+    position: relative;
+    width: 400px;
+    text-align: center;
 }
+
 .form-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
+    text-align: left;
 }
+
 .form-group input, .form-group select {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     box-sizing: border-box;
     margin-bottom: 10px;
 }
 
-.btn {
-    width: 100%;
+.btn-checkid {
+  width: 75px;
+  height: 30px;
+  padding: 0px 11px;
+  display: flex;
+  position: absolute;
+  top: 36%;
+  left: 80%;
+  border: 0;
+  border-radius: 5px;
+  /* color: red; */
+  /* background-color: blue; */
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #4551BF;
+  color: #fff;
+  font-size: 12px;
+}
+
+.btn-checkid:hover {
+  /* color: #555; */
+}
+
+.btn-signup {
+    width: 50%;
+    margin-top: 30px;
     padding: 10px;
-    background-color: #333;
     color: white;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background: rgb(146,169,255);
+    background: linear-gradient(207deg, rgba(146,169,255,1) 0%, rgba(53,58,148,1) 100%);
 }
-
 
 .password-group {
     position: relative;
