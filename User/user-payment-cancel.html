@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>모바일 결제 정보</title>
-  <link rel="stylesheet" href="user-payment-info.css" />
+  <title>모바일 결제 취소/환불 완료</title>
+  <link rel="stylesheet" href="user-payment-cancel.css" />
   <style>
 
   </style>
@@ -28,10 +28,11 @@
 
     <div class="user-main-content">
 
-      <div class="user-content-container">
-        <div class="header">2024/10/01 오늘도 케이크</div>
-      </div>
 
+      <div class="user-content-container">
+        <div class="header">결제 취소</div>
+        <div class="payment-amount">56,000원</div>
+      </div>
 
       <div class="user-content-container">
         <div class="header">예약 정보</div>
@@ -52,44 +53,8 @@
         </div>
       </div>
 
-
-      <div class="user-content-container">
-        <div class="header">결제 정보</div>
-        <div class="payment-info">
-          <div class="info-row">
-            <div class="left">결제 일시</div>
-            <div class="right">2024/10/01 15:37:35</div>
-          </div>
-          <div class="info-row">
-            <div class="left">결제수단</div>
-            <div class="right">카카오페이</div>
-          </div>
-          <div class="info-row info-row1">
-            <div class="left">• 예약금</div>
-            <div class="right">13,000</div>
-          </div>
-          <div class="info-row info-row1">
-            <div class="left">• 레터링케이크</div>
-            <div class="right">39,000</div>
-          </div>
-          <div class="info-row info-row2">
-            <div class="left">⨽ 사이즈 : 1호</div>
-            <div class="right">(+13,000)</div>
-          </div>
-          <div class="info-row info-row2">
-            <div class="left">⨽ 디자인초 : 스마일초</div>
-            <div class="right">(+3,000)</div>
-          </div>
-          <div class="info-row info-row2">
-            <div class="left">⨽ 보냉옵션 : O</div>
-            <div class="right">(+1,000)</div>
-          </div>
-        </div>
-      </div>
-
       <div class="user-content-container">
         <div class="header">취소/환불 정보</div>
-       
         <div class="payment-info">
           <div class="info-row">
             <div class="left">취소 일시</div>
@@ -111,6 +76,63 @@
         <div class="footer">
         </div>
       </div>
+
+
+      <div class="user-content-container">
+        <div class="payment-info">
+          <div class="info-row">
+            <div class="left">취소 및 환불 규정</div>
+            <div class="right"><button type="button" class="btn-regulation" onclick="toggleBox(this)">
+                ◀ </button>
+            </div>
+          </div>
+          <div class="hidden-box">
+            <p>고객님의 결제 이후 아래와 같은 조건에 따라 취소 및 환불이 가능합니다:</p>
+            <ul>
+              <li>결제 후 7일 이내 취소 요청 시 전액 환불이 가능합니다.</li>
+              <li>서비스 이용 시작 3일 전까지 취소 요청 시 50% 환불이 가능합니다.</li>
+              <li>서비스 이용 시작 1일 전 또는 당일 취소 시 환불이 불가합니다.</li>
+            </ul>
+            <p>환불은 취소 요청 후 영업일 기준 5일 이내에 처리됩니다.</p>
+            <p>기타 자세한 사항은 고객센터로 문의해 주시기 바랍니다.</p>
+          </div>
+        </div>
+
+        <div class="payment-info">
+          <div class="info-row">
+            <div class="left">취소 및 환불 규정</div>
+            <div class="right"><button type="button" class="btn-regulation" onclick="toggleBox(this)">
+              ◀ </button> 
+            </div>
+          </div>
+          <div class="hidden-box">👍</div>
+        </div>
+
+        <div class="payment-info">
+          <div class="info-row">
+            <div class="left">취소 및 환불 규정</div>
+            <div class="right"><button type="button" class="btn-regulation" onclick="toggleBox(this)">
+               ◀ </button>
+            </div>
+          </div>
+          <div class="hidden-box">👍</div>
+        </div>
+      </div>
+
+      <script>
+        function toggleBox(button) {
+            const hiddenBox = button.closest('.info-row').nextElementSibling;
+    
+            if (hiddenBox.style.display === 'none' || hiddenBox.style.display === '') {
+                hiddenBox.style.display = 'block';
+                button.textContent = '▼';
+            } else {
+                hiddenBox.style.display = 'none';
+                button.textContent = '◀';
+            }
+        }
+    </script>
+
 
 
 
