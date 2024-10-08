@@ -32,119 +32,131 @@ body {
     margin: 20px auto;
 }
 
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-        .store-img-box{
-            /* border :1px solid red; */
-            display: -webkit-box;
-            overflow: auto;
-            height: 300px;
-        }
+.store-img-box{
+    /* border :1px solid red; */
+    display: -webkit-box;
+    overflow: auto;
+    height: 280px;
+    margin-bottom: 50px;
 
-        .store-image {
-            width: 300px;
-            border-radius: 20px;
-            height: 250px;
-            background-color: #ddd;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
-            margin-right: 10px;
-            
-        }
+    scrollbar-width: thin; /* Firefox에서 스크롤바 얇게 */
+}
 
+.store-image {
+    width: 300px;
+    border-radius: 20px;
+    height: 250px;
+    background-color: #ddd;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    
+}
 
-
-
-        .store-image  img {
-            border-radius: 20px;
-            width: 100%;
-            height: 100%;
-            
-        }
-
-        .form-group {
-            display: flex;
-            justify-content: space-between;
-           
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .form-group label {
-            flex: 1;
-            font-weight: bold;
-          
-        }
-
-        .form-group .input-field {
-            flex: 2;
-            text-align: left;
-        }
+.store-image  img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 /* 
-        .form-group .input-field input, .form-group .input-field select, .form-group .input-field textarea {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        } */
-        .input-field textarea {
-            width: 80%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        .radio-group {
-           
-        }
+.form-cont {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+} */
 
-        /* .radio-group div {
-            width: 50%;
-        }
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 20px 20px;
+    border-bottom: 1px solid #ddd;
+}
 
-        .radio-group input {
-            width: 50%;
-            margin-right: 5px;
-        } */
-        .days-time-box {
+.form-group:last-child {
+    border-bottom: none;
+}
 
-        }
-        .hours-group {
-            /* display: flex; */
-            /* justify-content: space-between; */
-        }
+.form-group label {
+    flex: 1;
+    font-weight: bold;
+}
 
-        .hours-group input {
-            width: 30%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
+.form-group .input-field {
+    flex: 2;
+    text-align: left;
+}
+/* 
+.form-group .input-field input, .form-group .input-field select, .form-group .input-field textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+} */
+.input-field textarea {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.radio-group {
+    
+}
 
-        .sns-links {
-            display: flex;
-            flex-direction: column;
-        }
+/* .radio-group div {
+    width: 50%;
+}
 
-        .sns-links input {
-            margin-bottom: 10px;
-        }
+.radio-group input {
+    width: 50%;
+    margin-right: 5px;
+} */
+.days-time-box {
+    margin-bottom: 10px;
+}
+.hours-group {
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
 
-        .submit-btn {
-            display: block;
-            width: 100%;
-            padding: 15px;
-            background-color: #727272;
-            color: white;
-            text-align: center;
-            font-size: 18px;
-            border-radius: 5px;
-            margin-top: 20px;
-            cursor: pointer;
-            border: none;
-        
-        }
- 
+.hours-group input {
+    width: 30%;
+    padding: 8px;
+    margin-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.sns-links {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.sns-links a {
+    width: 50%;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+
+.submit-btn {
+    display: block;
+    width: 20%; height: 40px;
+    margin: 20px auto;
+    padding: 0;
+    background-color: #999;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+}
