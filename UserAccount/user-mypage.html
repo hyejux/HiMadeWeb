@@ -17,7 +17,7 @@
         <div class="user-top-nav">
             <div class="user-top-btns">
                 <button type="button"> < </button>
-                <logo class="logo"> HiMade !</logo>
+                <logo class="logo"> HandyLink !</logo>
                 <button type="button"> > </button>
             </div>
         </div>
@@ -27,17 +27,26 @@
                 <div class="user-mypage-container ">
                     <h2>마이 페이지</h2>
                     <div class="profile-pic">
-                        <img src="../img2.jpg" alt="Profile Picture">
+                        <img src="../img2.jpg" alt="Profile Picture" id="profileImage">
                         <div class="edit-icon"><i class="bi bi-pencil-square"></i></div>
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
                     </div>
                     <form class="user-mypage-form">
                         <div class="form-group">
                             <label for="email">ID</label>
                             <input type="text" id="email" value="helloworld123@gmail.com" disabled>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group password-group">
                             <label for="password">PW</label>
-                            <input type="password" id="password" placeholder="password">
+                            <input type="password" id="password" placeholder="비밀번호 입력">
+                            <div class="invisible-icon1"><i class="bi bi-eye-slash-fill"></i></div>
+                            <!-- <div class="visible-icon"><i class="bi bi-eye-fill"></i></div> -->
+                        </div>
+                        <div class="form-group password-group">
+                            <label for="repassword">RE-PASSWORD</label>
+                            <input type="password" id="repassword" placeholder="비밀번호 재입력">
+                            <div class="invisible-icon2"><i class="bi bi-eye-slash-fill"></i></div>
+                            <!-- <div class="visible-icon"><i class="bi bi-eye-fill"></i></div> -->
                         </div>
                         <div class="form-group">
                             <label for="name">NAME</label>
@@ -93,5 +102,63 @@
 
     </div>
   
+
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const invisibleIcon1 = document.querySelector('.invisible-icon1 i');
+    
+        invisibleIcon1.addEventListener('click', () => {
+            if (passwordInput.value) {
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    invisibleIcon1.classList.remove('bi-eye-slash-fill');
+                    invisibleIcon1.classList.add('bi-eye-fill');
+                } else {
+                    passwordInput.type = 'password';
+                    invisibleIcon1.classList.remove('bi-eye-fill');
+                    invisibleIcon1.classList.add('bi-eye-slash-fill');
+                }
+            }
+        });
+    
+        const repasswordInput = document.getElementById('repassword');
+        const invisibleIcon2 = document.querySelector('.invisible-icon2 i');
+    
+        invisibleIcon2.addEventListener('click', () => {
+            if (repasswordInput.value) {
+                if (repasswordInput.type === 'password') {
+                    repasswordInput.type = 'text';
+                    invisibleIcon2.classList.remove('bi-eye-slash-fill');
+                    invisibleIcon2.classList.add('bi-eye-fill');
+                } else {
+                    repasswordInput.type = 'password';
+                    invisibleIcon2.classList.remove('bi-eye-fill');
+                    invisibleIcon2.classList.add('bi-eye-slash-fill');
+                }
+            }
+        });
+
+
+    // 프로필 사진
+    const fileInput = document.getElementById('fileInput');
+    const profileImage = document.getElementById('profileImage');
+    const editIcon = document.querySelector('.edit-icon');
+
+    editIcon.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    fileInput.addEventListener('change', () => {
+        const file = fileInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                profileImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+    </script>
 </body>
 </html>

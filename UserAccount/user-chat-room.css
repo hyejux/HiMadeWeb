@@ -185,7 +185,7 @@ body {
 }
 
 .message.user .bubble {
-    background-color: #D9D9D9;
+    background-color: #eee;
     color: #000;
     border-radius: 15px;
     border-bottom-right-radius: 0px;

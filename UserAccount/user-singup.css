@@ -235,7 +235,34 @@ h2 {
     margin: 0;
     margin-top: 2cap;
     margin-bottom: 50px;
-    font-size: 40px;
+    font-size: 30px;
+    color: #444;
+}
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+.profile-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 41%;
+  width: 25px;
+  height: 25px;
+  background-color: #2C348F;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .form-signup {
@@ -306,5 +333,17 @@ h2 {
 }
 
 .password-group {
-    position: relative;
+  position: relative;
+}
+
+.password-group .invisible-icon1 {
+  position: absolute;
+  top: 45%;
+  left: 92%;
+}
+
+.password-group .invisible-icon2 {
+  position: absolute;
+  top: 45%;
+  left: 92%;
 }

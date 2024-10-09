@@ -267,6 +267,8 @@ h2 {
 .form-group {
     margin-bottom: 30px;
 }
+
+
 .form-group label {
     display: block;
     font-size: 14px;
@@ -305,4 +307,20 @@ h2 {
 .btn.update {
     background-color: #2C348F;
     color: white;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-group .invisible-icon1 {
+  position: absolute;
+  top: 50%;
+  left:75%;
+}
+
+.password-group .invisible-icon2 {
+  position: absolute;
+  top: 50%;
+  left:75%;
 }
