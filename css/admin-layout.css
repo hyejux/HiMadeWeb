@@ -7,22 +7,11 @@
   font-weight: normal;
   font-style: normal;
 }
-
-
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
-}
-
-body {
-  font-family: 'Pretendard-Regular';
-}
-
-.app-title {
-  border : 1px solid red;
-  color : red;
 }
 
 body {
@@ -35,18 +24,26 @@ body {
 
 .logo {
   font-family: 'ghanachoco';
-  font-size: 30px;
+  font-size: 28px;
   margin-bottom: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
 }
 
-  .mainBox {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    height: 100%;
-  }
+.mainBox {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 100%;
+ 
+}
+
+.menu-btn {
+  transition: opacity 0.3s ease;
+}
 
 .sidebar {
+
   width: 220px;
   background-color: #1d2830;
   color: #ecf0f1;
@@ -54,80 +51,117 @@ body {
   display: flex;
   flex-direction: column;
   padding: 15px;
-  padding-left: 35px;
-
+  /* padding-left: 35px; */
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
 }
 
-.sidebar .bi-house-door-fill {
-  /*부트스트랩 아이콘 home 모양*/
-  font-size: 30px;
-  line-height: 30px;
+.dropdown {
+  text-decoration: none;
+  color: #ecf0f1;
+  display: none;
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
 }
 
-.sidebar .bi-house-door-fill:hover {
-  cursor: pointer;
+.sidebar div:nth-child(2){
+  margin-top: 15px;
+}
+.sidebar div {
+  margin-bottom: 5px;
 }
 
-.sidebar h2 {
-  margin: 0;
-  margin-bottom: 20px;
-}
 .sidebar a {
   text-decoration: none;
   color: #ecf0f1;
-  padding: 10px 0;
-  margin: 5px 0;
+  padding: 15px 10px;
+  padding-left: 20px;
+  display: block;
+
+}
+
+.dropdown-btn > .bi-caret-down-fill {
+  font-size: 15px;
+  position: absolute;
+  top: 20px;
+  left: 160px;
+}
+
+.dropdown-btn > .bi-caret-left-fill {
+  display: none;
+  font-size: 15px;
+  position: absolute;
+  top: 20px;
+  left: 160px;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #ecf0f1;
+  padding: 15px 10px;
+  padding-left: 30px;
   display: block;
 }
-.sidebar a:hover {
-  background-color: #6E7C85;
+
+ .menu-btn .bi {
+  /* display: inline; */
+  margin-right: 5px;
+}
+
+.dropdown a:hover {
+  background-color: #64768194;
 }
 
 
+.sidebar .menu-btn:hover {
+  background-color: #64768194;
+}
 
-/* home 아이콘 때문에 아래부터 다 건드림 */
-.main-nav {
+
+.dropdown-btn {
+  transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+  cursor: pointer;
+  text-decoration: none;
+  color: #ecf0f1;
+  padding: 15px 10px;
+  padding-left: 20px;
+  display: block;
+  position: relative;
+}
+
+.dropdown-btn.active {
+  background-color: #64768194; /* 드롭다운이 열릴 때 배경색 */
+}
+
+/* -------------------------------------------------- */
+
+.layout-nav {
   border-bottom: 1px solid #ddd;
   background-color: #1d2830;
   height: 80px;
   display: flex;
   align-items: center;
   padding: 0 20px;
-  justify-content: space-between;
-}
-
-/* 아이콘 감싼 박스 */
-.icon-box {
-  width: 32px;
-      margin-left: 30px;
-}
-
-/* 홈 아이콘 크기 */
-.icon-box > .home-icon {
-  font-size: 32px;
-  cursor: pointer;
+  justify-content: flex-end;
 }
 
 
-.user-profile {
+.layout-profile {
   margin-top: 10px;
   float: right;
   width: 400px;
 
 
 }
-.user-profile-buttons {
+
+.layout-profile-buttons {
   display: flex;
   width: 100%;
-    gap: 3%;
- 
+  gap: 3%;
 }
 
 
-.user-profile-box {
+.layout-profile-box {
   /*홍길동 님*/
   align-items: center;
   color : #fff;
@@ -135,39 +169,40 @@ body {
   width: 100%;
 }
 
-.user-profile-button{
+.layout-profile-button{
   /*버튼*/
   /*padding: 10px 16px;*/
   border: 1px solid #1d2830;
-  background-color: #575e63;
+  background-color: #515766;
   color: white;
   font-size: 14px;
   border-radius: 2px;
   cursor: pointer;
 }
 
-.user-mypage-button{
+.layout-mypage-button{
   /*마이페이지 버튼*/
   width: 100%;
   height: 30px;
-  background-color: #6E7C85;
+  background-color: #51699f96;
   color: #ffffff;
 }
-.user-mypage-button:hover{
-  background-color: #2424245b;
+
+.layout-mypage-button:hover{
+  background-color: #59595996;
 }
 
 
-.user-logout-button{
+.layout-logout-button{
   /*로그아웃 버튼*/
   width: 100%;
   height: 30px;
 }
-.user-logout-button:hover{
-  background-color: #2424245b;
+.layout-logout-button:hover{
+  background-color: #59595996;
 }
 
-.user-profile-info {
+.layout-profile-info {
   /*홍길동 님 + 버튼 2개 감싼 박스*/
   align-items: center;
   font-size: 18px;
@@ -177,7 +212,7 @@ body {
   width: 100%;
 }
 
-.user-profile-img{
+.layout-profile-img{
   width: 50px;
   height: 50px;
   border-radius: 100px;
@@ -185,13 +220,13 @@ body {
 }
 
 
-
-.main-container {
+.layout-container {
   flex: 1;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
 }
+
 #root {
   margin: 20px 50px;
 }

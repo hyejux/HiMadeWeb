@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .custom-select {
+      border: 1px solid red;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 4열 그리드 */
+      gap: 5px;
+      width: 500px;
+      padding: 10px;
+    }
+    .custom-option {
+      border: 1px solid red;
+      border-radius: 3px;
+      background-color: #fff;
+      padding: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .selected {
+      background-color: yellow; /* 선택된 항목의 배경색 */
+    }
+  </style>
+</head>
+<body>
+  <div class="custom-select">
+    <div class="custom-option">1 고기 +1000</div>
+    <div class="custom-option">2 야채 +2000</div>
+    <div class="custom-option">1 고기 +1000</div>
+    <div class="custom-option">2 야채 +2000</div>
+    <div class="custom-option">1 고기 +1000</div>
+    <div class="custom-option">2 야채 +2000</div>
+    <div class="custom-option">1 고기 +1000</div>
+    <div class="custom-option">2 야채 +2000</div>
+  </div>
+
+  <script>
+    // 모든 옵션을 가져옴
+    const options = document.querySelectorAll('.custom-option');
+
+    options.forEach(option => {
+      option.addEventListener('click', function() {
+        // 클릭될 때 기존 선택된 항목 해제
+        options.forEach(opt => opt.classList.remove('selected'));
+        // 현재 클릭된 항목 선택
+        this.classList.add('selected');
+      });
+    });
+  </script>
+</body>
+</html>
