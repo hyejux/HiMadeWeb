@@ -18,7 +18,7 @@
       <div class="user-top-nav">
         <div class="user-top-btns">
             <button type="button"> < </button>
-            <logo class="logo"> HiMade !</logo>
+            <logo class="logo"> HandyLink !</logo>
             <button type="button"> > </button>
         </div>
     </div>
@@ -27,11 +27,18 @@
 
             <div class="user-chat-container">
                 <div class="user-chat-header">1:1 채팅 목록</div>
-                <div class="header">
-               
-                    <span class="filter-btn">Filter</span>
+
+                <div class="filter-group">
+                    <div class="filter">
+                        <span class="filter-btn">Filter</span>
+                    </div>
+
+                    <!-- <div class="filter-popup" id="filterPopup">
+                        <div class="filter-option" data-type="reservation">예약 문의</div>
+                        <div class="filter-option" data-type="general">일반 문의</div>
+                    </div> -->
                 </div>
-        
+
                 <div class="search-bar">
                     <input type="text" placeholder="업체명 검색">
                     <i class="bi bi-search"></i>
@@ -42,7 +49,7 @@
                         <img src="../img3.jpg" alt="프라이들 앤 스위츠">
                         <div class="inquiry-content">
                             <p class="inquiry-title">프라이들 앤 스위츠</p>
-                            <p class="inquiry-message">휴가 기간에 대관 가능한가요?</p>
+                            <p class="inquiry-message">안녕하세요?</p>
                         </div>
                         <span class="inquiry-time">09:20 PM</span>
                     </li>
@@ -136,5 +143,28 @@
 
     </div>
   
+    <script>
+        // const filterBtn = document.querySelector('.filter-btn');
+        // const filterPopup = document.getElementById('filterPopup');
+
+        // filterBtn.addEventListener('click', () => {
+        //     filterPopup.style.display = filterPopup.style.display === 'block' ? 'none' : 'block';
+        // });
+
+        // document.querySelectorAll('.filter-option').forEach(option => {
+        //     option.addEventListener('click', () => {
+        //         const filterType = option.getAttribute('data-type');
+        //         console.log(`${filterType} 필터가 선택되었습니다.`);
+        //         filterPopup.style.display = 'none';
+        //     });
+        // });
+
+        // document.addEventListener('click', (event) => {
+        //     if (!filterBtn.contains(event.target) && !filterPopup.contains(event.target)) {
+        //         filterPopup.style.display = 'none';
+        //     }
+        // });
+
+    </script>
 </body>
 </html>

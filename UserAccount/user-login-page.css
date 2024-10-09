@@ -245,6 +245,7 @@ h2 {
 
 .form-group {
     margin-bottom: 30px;
+    position: relative;
 }
 
 /* .form-group label {
@@ -262,6 +263,12 @@ h2 {
     border-radius: 8px;
     background-color: #EEE;
     box-sizing: border-box;
+}
+
+.form-group .invisible-icon {
+  position: absolute;
+  top: 30%;
+  left: 80%;
 }
 
 .btn-dologin {
@@ -290,8 +297,8 @@ h2 {
     margin: 20px 0;
 }
 .social-login img {
-    width: 50px;
-    height: 50px;
+    width: 60%;
+    height: 55px;
     cursor: pointer;
 }
 .divider {

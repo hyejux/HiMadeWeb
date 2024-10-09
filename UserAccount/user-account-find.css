@@ -222,9 +222,14 @@ body {
     background-color: white;
     padding: 20px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .user-account-find form {
+    width: 100%;
     margin: 50px;
     margin-bottom: 100px;
 }
@@ -232,16 +237,19 @@ body {
 .user-account-find-toggle {
     display: flex;
     margin-bottom: 50px;
-    width: 80%;
+    width: 70%;
     justify-content: center;
-    text-align: center;
 }
+
 .user-account-find-toggle > button {
     width: 60%;
     height: 60px;
     border: none;
     font-weight: bold;
     flex: 1;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .user-account-msg{ 
@@ -282,7 +290,7 @@ body {
 } */
 
 .form-group input {
-    width: 70%;
+    width: 60%;
     padding: 10px;
     font-size: 16px;
     border: 0px;
@@ -293,7 +301,7 @@ body {
 
 .btn-findaccount {
     margin-top: 50px;
-    width: 70%;
+    width: 60%;
     height: 50px;
     padding: 10px;
     background: rgb(146,169,255);
