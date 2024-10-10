@@ -97,7 +97,7 @@ body {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  border: 1px solid #2C348F;
+  border: 2px solid #2C348F;
 }
 
 .header {
@@ -207,9 +207,17 @@ body {
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: #738BE3;
-  color: white;
   cursor: pointer;
+}
+
+.btn-left {
+  color: #000;
+  background-color: rgba(44, 52, 143, 0.16);
+}
+
+.btn-right {
+  color: white;
+  background-color: #738BE3;
 }
 
 
