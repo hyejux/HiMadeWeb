@@ -251,7 +251,7 @@ h2 {
     right: 41%;
     width: 25px;
     height: 25px;
-    background-color: #2C348F;
+    background-color: #434EBD;
     border-radius: 50%;
     color: white;
     display: flex;
@@ -268,6 +268,10 @@ h2 {
     margin-bottom: 30px;
 }
 
+.form-group input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+  -webkit-text-fill-color: #000;
+}
 
 .form-group label {
     display: block;
@@ -283,6 +287,7 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    outline: none;
 }
 .btn-group {
     display: flex;
@@ -305,7 +310,7 @@ h2 {
     background-color: #E5E5EA;
 }
 .btn.update {
-    background-color: #2C348F;
+    background-color: #434EBD;
     color: white;
 }
 
