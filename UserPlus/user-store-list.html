@@ -9,17 +9,20 @@
   <style>
 
   </style>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
   <div class="user-main-container">
     <div class="user-top-nav">
-      <logo class="logo"> HiMade !</logo>
+      <logo class="logo"> HandyLink !</logo>
     </div>
 
     <div class="store-search-bar">
-      <i class="bi bi-search"></i> <input type="text" placeholder="가게 검색" /> 
+      <i class="bi bi-search"></i> <input type="text" placeholder="찾으시는 가게가 있나요?" />
       <button class="nav-button left">‹</button>
       <button class="nav-button right">›</button>
     </div>
@@ -71,6 +74,42 @@
 
       </div>
 
+
+      <div class="user-hashtag-list-wrap">
+        <div class="user-hashtag-list">
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>레터링케이크</a></button>
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>플라워 박스</a></button>
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>꽃바구니</a></button>
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>아이스크림</a></button>
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>쿠키 & 머핀</a></button>
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>볼륨매직</a></button>
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>도자기 체험 클래스</a></button>
+          <button type="button" class="btn-hashtag"><a href="#"><i class="bi bi-hash"></i>기념일 꽃</a></button>
+        </div>
+      </div>
+
+
+      <div class="user-hit-search-list">
+
+        <button class="nav-button-wrap3 left">‹</button>
+        <button class="nav-button-wrap3 right">›</button>
+
+        <h4><img src="/icon-fire.png" alt="fire"> 10월 인기 가게</h4>
+        <ol class="store-list">
+          <li>1 <a href="#">오늘도 케이크</a></li>
+          <li>2 <a href="#">내일도 케이크</a></li>
+          <li>3 <a href="#">행복한 도자기</a></li>
+          <li>4 <a href="#">오즈 베이커리</a></li>
+          <li>5 <a href="#">아트플라워 </a></li>
+          <li>6 <a href="#">올리브 베이커리</a></li>
+          <li>7 <a href="#">작은 정원</a></li>
+          <li>8 <a href="#">더케이크샵</a></li>
+          <li>9 <a href="#">뷰티하우스 </a></li>
+          <li>10 <a href="#">도자기 마을</a></li>
+        </ol>
+      </div>
+
+
       <div class="user-main-list-wrap2">
         <div class="user-main-list-menu">
           <button type="button"> 자양동 </button>
@@ -89,16 +128,35 @@
 
         <button class="nav-button-wrap2 left">‹</button>
         <button class="nav-button-wrap2 right">›</button>
-        
+
         <div class="user-main-list-sub-part">
-          <div> 검색 결과 <span> 3</span> 건</div>
-          <div> <i class="bi bi-list"></i> 정렬 </div>
+          <div> 검색결과 <span> 3</span> 건</div>
+
+          <div class="dropdown">
+            <button class="btn btn-sm" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span id="dropdownButtonText">추천순</span> <i class="bi bi-chevron-down"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="#" data-value="추천순">추천순</a></li>
+              <li><a class="dropdown-item" href="#" data-value="인기순">인기순</a></li>
+              <li><a class="dropdown-item" href="#" data-value="거리순">거리순</a></li>
+              <li><a class="dropdown-item" href="#" data-value="별점순">별점순</a></li>
+              <li><a class="dropdown-item" href="#" data-value="후기 많은순">후기 많은순</a></li>
+            </ul>
+          </div>
+
+
         </div>
-        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
         <div class="user-main-list-sub-content">
           <i class="bi bi-heart"></i>
           <div class="sub-content-img-box"> <img src="../img3.jpg" /></div>
-          
+
           <div class="sub-content-top">
             <div class="sub-content-container">
               <div class="sub-content-title">오늘도 케이크</div>
@@ -108,32 +166,32 @@
               <i class="bi bi-clock-fill"></i>영업중 10:00 ~ 22:00
             </div>
           </div>
-          
+
           <div class="sub-content-mid">
-            <div class="sub-content-review"> 
+            <div class="sub-content-review">
               ⭐<span>4.8</span>
               <span>(10,959)</span>
             </div>
-            <div class="sub-content-location"> 
+            <div class="sub-content-location">
               <i class="bi bi-geo-alt-fill"></i>현재 위치에서 950m
             </div>
           </div>
-          
+
           <div class="sub-content-bottom">
             <div class="sub-content-price">₩ 12,000 ~ </div>
             <div class="sub-content-option-container">
-              # <span class="sub-content-option">레터링케이크</span> 
-              # <span class="sub-content-option">치즈케이크</span> 
-              # <span class="sub-content-option">마카롱</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">레터링케이크</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">치즈케이크</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">마카롱</span>
             </div>
           </div>
-          
+
         </div>
 
         <div class="user-main-list-sub-content">
           <i class="bi bi-heart"></i>
           <div class="sub-content-img-box"> <img src="../img2.jpg" /></div>
-          
+
           <div class="sub-content-top">
             <div class="sub-content-container">
               <div class="sub-content-title">내일도 케이크</div>
@@ -143,32 +201,32 @@
               <i class="bi bi-clock-fill"></i>영업중 10:00 ~ 22:00
             </div>
           </div>
-          
+
           <div class="sub-content-mid">
-            <div class="sub-content-review"> 
+            <div class="sub-content-review">
               ⭐<span>4.8</span>
               <span>(10,959)</span>
             </div>
-            <div class="sub-content-location"> 
+            <div class="sub-content-location">
               <i class="bi bi-geo-alt-fill"></i>현재 위치에서 950m
             </div>
           </div>
-          
+
           <div class="sub-content-bottom">
             <div class="sub-content-price">₩ 12,000 ~ </div>
             <div class="sub-content-option-container">
-              # <span class="sub-content-option">레터링케이크</span> 
-              # <span class="sub-content-option">치즈케이크</span> 
-              # <span class="sub-content-option">마카롱</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">레터링케이크</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">치즈케이크</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">마카롱</span>
             </div>
           </div>
-          
+
         </div>
 
         <div class="user-main-list-sub-content">
           <i class="bi bi-heart"></i>
           <div class="sub-content-img-box"> <img src="../img1.jpg" /></div>
-          
+
           <div class="sub-content-top">
             <div class="sub-content-container">
               <div class="sub-content-title">오늘도 케이크</div>
@@ -178,153 +236,121 @@
               <i class="bi bi-clock-fill"></i>영업중 10:00 ~ 22:00
             </div>
           </div>
-          
+
           <div class="sub-content-mid">
-            <div class="sub-content-review"> 
+            <div class="sub-content-review">
               ⭐<span>4.8</span>
               <span>(10,959)</span>
             </div>
-            <div class="sub-content-location"> 
+            <div class="sub-content-location">
               <i class="bi bi-geo-alt-fill"></i>현재 위치에서 950m
             </div>
           </div>
-          
+
           <div class="sub-content-bottom">
             <div class="sub-content-price">₩ 12,000 ~ </div>
             <div class="sub-content-option-container">
-              # <span class="sub-content-option">레터링케이크</span> 
-              # <span class="sub-content-option">치즈케이크</span> 
-              # <span class="sub-content-option">마카롱</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">레터링케이크</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">치즈케이크</span>
+              <i class="bi bi-hash"></i><span class="sub-content-option">마카롱</span>
             </div>
           </div>
-          
+
         </div>
-          
-          
 
+      </div>
+
+
+      <div class="user-bottom-nav">
+        <a href="#">
+          <span>메인</span>
+        </a>
+        <a href="#">
+          <span>검색</span>
+        </a>
+        <a href="#">
+          <span>예약</span>
+        </a>
+        <a href="#">
+          <span>문의</span>
+        </a>
+        <a href="#">
+          <span>MY</span>
+        </a>
+      </div>
 
 
 
 
     </div>
-    <div class="user-bottom-nav">
-      <a href="#">
-        <span>메인</span>
-      </a>
-      <a href="#">
-        <span>검색</span>
-      </a>
-      <a href="#">
-        <span>예약</span>
-      </a>
-      <a href="#">
-        <span>문의</span>
-      </a>
-      <a href="#">
-        <span>MY</span>
-      </a>
-    </div>
 
 
 
+    <script>
+      // 리스트에 대한 스크롤 및 버튼 제어 설정
+      function setupScrollControls(listWrap, btnLeft, btnRight) {
+        btnLeft.addEventListener('click', () => {
+          listWrap.scrollBy({ left: -200, behavior: 'smooth' });
+        });
 
-  </div>
+        btnRight.addEventListener('click', () => {
+          listWrap.scrollBy({ left: 200, behavior: 'smooth' });
+        });
 
-  <script>
-    // 첫 번째 리스트에 대한 스크롤 및 버튼 제어
-    const listWrap = document.querySelector('.user-main-list-wrap');
-    const btnLeft = document.querySelector('.nav-button.left');
-    const btnRight = document.querySelector('.nav-button.right');
+        listWrap.addEventListener('scroll', () => {
+          updateButtonVisibility(listWrap, btnLeft, btnRight);
+        });
 
-    // 좌측 버튼 클릭 시
-    btnLeft.addEventListener('click', () => {
-      listWrap.scrollBy({
-        left: -200,
-        behavior: 'smooth'
-      });
-    });
-
-    // 우측 버튼 클릭 시
-    btnRight.addEventListener('click', () => {
-      listWrap.scrollBy({
-        left: 200,
-        behavior: 'smooth'
-      });
-    });
-
-    // 첫 번째 리스트의 스크롤 위치에 따른 버튼 표시/숨기기
-    listWrap.addEventListener('scroll', () => {
-      updateButtonVisibility(listWrap, btnLeft, btnRight);
-    });
-
-    // 두 번째 리스트에 대한 스크롤 및 버튼 제어
-    const listWrap2 = document.querySelector('.user-main-list-wrap2');
-    const btnLeft2 = document.querySelector('.nav-button-wrap2.left');
-    const btnRight2 = document.querySelector('.nav-button-wrap2.right');
-
-    // 좌측 버튼 클릭 시
-    btnLeft2.addEventListener('click', () => {
-      listWrap2.scrollBy({
-        left: -200,
-        behavior: 'smooth'
-      });
-    });
-
-    // 우측 버튼 클릭 시
-    btnRight2.addEventListener('click', () => {
-      listWrap2.scrollBy({
-        left: 200,
-        behavior: 'smooth'
-      });
-    });
-
-    // 두 번째 리스트의 스크롤 위치에 따른 버튼 표시/숨기기
-    listWrap2.addEventListener('scroll', () => {
-      updateButtonVisibility(listWrap2, btnLeft2, btnRight2);
-    });
-
-    // 페이지가 로드될 때 버튼 상태 초기화
-    document.addEventListener('DOMContentLoaded', () => {
-      updateButtonVisibility(listWrap, btnLeft, btnRight);
-      updateButtonVisibility(listWrap2, btnLeft2, btnRight2);
-    });
-
-    // 스크롤 가능한지 여부에 따라 버튼 가시성 업데이트 함수
-    function updateButtonVisibility(list, leftBtn, rightBtn) {
-      const scrollLeft = list.scrollLeft;
-      const maxScrollLeft = list.scrollWidth - list.clientWidth;
-
-      // 왼쪽으로 더 이상 스크롤할 부분이 없으면 왼쪽 버튼 숨기기
-      if (scrollLeft <= 0) {
-        leftBtn.style.display = 'none';
-      } else {
-        leftBtn.style.display = 'block';
+        // 초기 상태 설정
+        updateButtonVisibility(listWrap, btnLeft, btnRight);
       }
 
-      // 오른쪽으로 더 이상 스크롤할 부분이 없으면 오른쪽 버튼 숨기기
-      if (scrollLeft >= maxScrollLeft) {
-        rightBtn.style.display = 'none';
-      } else {
-        rightBtn.style.display = 'block';
+      // 스크롤 가능한지 여부에 따라 버튼 가시성 업데이트 함수
+      function updateButtonVisibility(list, leftBtn, rightBtn) {
+        const scrollLeft = list.scrollLeft;
+        const maxScrollLeft = list.scrollWidth - list.clientWidth;
+
+        leftBtn.style.display = scrollLeft <= 0 ? 'none' : 'block';
+        rightBtn.style.display = scrollLeft >= maxScrollLeft ? 'none' : 'block';
       }
-    }
 
+      document.addEventListener('DOMContentLoaded', () => {
+        // 첫 번째 리스트 설정
+        const listWrap = document.querySelector('.user-main-list-wrap');
+        const btnLeft = document.querySelector('.nav-button.left');
+        const btnRight = document.querySelector('.nav-button.right');
+        setupScrollControls(listWrap, btnLeft, btnRight);
 
-    // 모든 버튼들을 가져옵니다.
-    const buttons = document.querySelectorAll('.user-main-list-menu button');
+        // 두 번째 리스트 설정
+        const listWrap2 = document.querySelector('.user-main-list-wrap2');
+        const btnLeft2 = document.querySelector('.nav-button-wrap2.left');
+        const btnRight2 = document.querySelector('.nav-button-wrap2.right');
+        setupScrollControls(listWrap2, btnLeft2, btnRight2);
 
-    // 각 버튼에 클릭 이벤트를 추가합니다.
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        // 모든 버튼에서 'active' 클래스를 제거합니다.
-        buttons.forEach(btn => btn.classList.remove('active'));
+        // 해시태그 리스트 설정
+        const hashtagListWrap = document.querySelector('.user-hashtag-list-wrap');
+        const btnLeft3 = document.querySelector('.nav-button-wrap3.left');
+        const btnRight3 = document.querySelector('.nav-button-wrap3.right');
+        setupScrollControls(hashtagListWrap, btnLeft3, btnRight3);
 
-        // 클릭된 버튼에 'active' 클래스를 추가합니다.
-        button.classList.add('active');
+        // 버튼 active 상태 관리
+        const buttons = document.querySelectorAll('.user-main-list-menu button');
+        buttons.forEach(button => {
+          button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+          });
+        });
+
+        // 드롭다운 버튼 텍스트 업데이트
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+          item.addEventListener('click', function () {
+            const buttonText = this.getAttribute('data-value');
+            document.getElementById('dropdownButtonText').textContent = buttonText;
+          });
+        });
       });
-    });
-  </script>
-
+    </script>
 
 
 

@@ -61,7 +61,7 @@ body {
 .user-main-container {
   padding: 0px;
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   max-width: 600px;
   min-height: calc(100vh - 63px);
 }
@@ -97,7 +97,7 @@ body {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  border: 1px solid #ddd
+  border: 2px solid #2C348F;
 }
 
 .header {
@@ -207,8 +207,17 @@ body {
   height: 40px;
   border-radius: 5px;
   border: none;
-  background-color: #ddd;
   cursor: pointer;
+}
+
+.btn-left {
+  color: #000;
+  background-color: rgba(44, 52, 143, 0.16);
+}
+
+.btn-right {
+  color: white;
+  background-color: #738BE3;
 }
 
 

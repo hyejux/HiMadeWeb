@@ -14,14 +14,12 @@
 <body>
 
 
-
-
   <div class="user-main-container">
     <div class="user-top-nav">
       <div class="user-top-btns">
         <button type="button">
           < </button>
-            <logo class="logo"> HiMade !</logo>
+            <logo class="logo"> HandyLink !</logo>
             <button type="button"> > </button>
       </div>
     </div>
@@ -48,8 +46,8 @@
           </div>
         </div>
         <div class="button-group">
-          <button class="button">가게 정보</button>
-          <button class="button">예약 상세</button>
+          <button class="button btn-left">가게 정보</button>
+          <button class="button btn-right">예약 상세</button>
         </div>
       </div>
 
@@ -83,7 +81,7 @@
           <div class="info-row">
             <div class="left">취소 및 환불 규정</div>
             <div class="right"><button type="button" class="btn-regulation" onclick="toggleBox(this)">
-                ◀ </button>
+                ▽ </button>
             </div>
           </div>
           <div class="hidden-box">
@@ -102,7 +100,7 @@
           <div class="info-row">
             <div class="left">취소 및 환불 규정</div>
             <div class="right"><button type="button" class="btn-regulation" onclick="toggleBox(this)">
-              ◀ </button> 
+                ▽ </button>
             </div>
           </div>
           <div class="hidden-box">👍</div>
@@ -112,28 +110,12 @@
           <div class="info-row">
             <div class="left">취소 및 환불 규정</div>
             <div class="right"><button type="button" class="btn-regulation" onclick="toggleBox(this)">
-               ◀ </button>
+                ▽ </button>
             </div>
           </div>
           <div class="hidden-box">👍</div>
         </div>
       </div>
-
-      <script>
-        function toggleBox(button) {
-            const hiddenBox = button.closest('.info-row').nextElementSibling;
-    
-            if (hiddenBox.style.display === 'none' || hiddenBox.style.display === '') {
-                hiddenBox.style.display = 'block';
-                button.textContent = '▼';
-            } else {
-                hiddenBox.style.display = 'none';
-                button.textContent = '◀';
-            }
-        }
-    </script>
-
-
 
 
     </div>
@@ -157,9 +139,19 @@
     </div>
 
 
-
-
   </div>
+
+  <script>
+    function toggleBox(button) {
+      const hiddenBox = button.closest('.info-row').nextElementSibling;
+
+      if (hiddenBox.style.display === 'none' || hiddenBox.style.display === '') {
+        hiddenBox.style.display = 'block';
+      } else {
+        hiddenBox.style.display = 'none';
+      }
+    }
+  </script>
 
 </body>
 
