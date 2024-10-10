@@ -151,10 +151,15 @@ body {
     cursor: pointer;
 }
 
+.shop-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .chat-box {
     flex-grow: 1;
     overflow-y: auto;
-    margin-top: 20px;
     padding: 10px;
 }
 
@@ -162,6 +167,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
+    align-items: flex-start;
 }
 
 .message.user {
@@ -169,15 +175,20 @@ body {
 }
 
 .message .bubble {
-    background-color: #f0f0f0;
-    padding: 10px 15px;
+    background-color: #434EBD;
+    color: #fff;
+    padding: 15px 25px;
     border-radius: 15px;
-    max-width: 80%;
+    border-bottom-left-radius: 0px;
+    max-width: 70%;
     word-break: break-word;
 }
 
 .message.user .bubble {
-    background-color: #d1d1d1;
+    background-color: #eee;
+    color: #000;
+    border-radius: 15px;
+    border-bottom-right-radius: 0px;
 }
 
 .timestamp {
@@ -190,14 +201,18 @@ body {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ccc;
+    position: relative;
 }
 
 .input-box input {
+    height: 25px;
     flex-grow: 1;
     padding: 10px;
+    margin: 10px;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: 10px;
     outline: none;
+    font-size: 16px;
 }
 
 .input-box button {
@@ -206,7 +221,10 @@ body {
     margin-left: 10px;
     cursor: pointer;
     font-size: 30px;
-    color : red;
+    color : #434EBD;
+    position: absolute;
+    left: 88%;
+    top: 30%;
 }
 
 .footer {

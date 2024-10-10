@@ -13,110 +13,119 @@
         <!-- Step Indicator -->
         <div class="step-indicator">
             <div class="step">
-                <div class="icon"></div>
-                <p>STEP 01</p>
+                <div class="icon">
+                    <p>STEP 01<br/>이용약관/개인정보방침 동의</p>
+                </div>
             </div>
             <div class="step">
-                <div class="icon"></div>
-                <p>STEP 02</p>
+                <div class="icon">
+                    <p>STEP 02<br/>신규등록</p>
+                </div>
             </div>
             <div class="step active">
-                <div class="icon"></div>
-                <p>STEP 03<br>가게 정보 등록</p>
+                <div class="icon">
+                    <p>STEP 03<br>가게정보등록</p>
+                </div>
             </div>
             <div class="step">
-                <div class="icon"></div>
-                <p>STEP 04</p>
+                <div class="icon">
+                    <p>STEP 04 <br/> 가입완료</p>
+                </div>
             </div>
         </div>
 
         <!-- Main Form -->
-        <h2>해당 사이트에 등록할 가게 정보를 입력하는 단계입니다.</h2>
+         <div class="noti-text">
+            <i class="bi bi-check-lg"></i>
+            <h>해당 사이트에 등록할 가게 정보를 입력하는 단계입니다.</h>
+         </div>
 
         <label for="description">소개</label>
-        <textarea id="description" rows="4" placeholder="가게 소개를 입력하세요."></textarea>
+        <textarea id="description" rows="4" placeholder="가게 소개를 입력하세요." style="max-height: 80px; overflow-y: auto;"></textarea>
 
         <div class="operating-hours">
-            <label for="hours">영업 시간</label>
-            <select>
-                <option>요일 선택</option>
-            </select>
-            <input type="time"> ~ 
-            <input type="time">
+            <label for="hours">영업 시간
+                <i class="bi bi-plus-square-dotted"></i>
+            </label>
+            <div class="op-hours">
+                <select>
+                    <option>요일 선택</option>
+                    <option>매일</option>
+                    <option>월요일</option>
+                    <option>화요일</option>
+                    <option>수요일</option>
+                    <option>목요일</option>
+                    <option>금요일</option>
+                    <option>토요일</option>
+                    <option>일요일</option>
+                </select>
+                <input type="time"> ~ <input type="time">
+                <i class="bi bi-dash-square"></i>
+            </div>
         </div>
 
         <div class="parking">
             <label for="parking">주차 여부</label>
-            <input type="radio" name="parking" id="yes"> 주차 가능
-            <input type="radio" name="parking" id="no">  주차 불가
+            <div class="parking-yn">
+                <input type="radio" name="parking" id="yes"> 주차 가능
+                <input type="radio" name="parking" id="no">  주차 불가
+            </div>
         </div>
 
         <div class="sns">
-            <label for="sns">SNS 링크(선택)</label>
+            <label for="sns">SNS 링크(선택)
+                <span class="small-text">* 최대 3개</span>
+            </label>
             <div class="sns-box">
-                <input type="text" id="sns" placeholder="SNS 링크를 입력하세요">
-                <input type="text" id="sns" value="인스타그램"/> 
+                <input type="text" id="sns" placeholder="링크를 입력하세요">
+                <input type="text" id="sns" placeholder="표기 ex) 인스타그램"/> 
             </div>
             <div class="sns-box">
-                <input type="text" id="sns" placeholder="SNS 링크를 입력하세요">
-                <input type="text" id="sns" value="인스타그램"/> 
+                <input type="text" id="sns" placeholder="링크를 입력하세요">
+                <input type="text" id="sns" placeholder="표기 ex) 인스타그램"/> 
             </div>
             <div class="sns-box">
-                <input type="text" id="sns" placeholder="SNS 링크를 입력하세요">
-                <input type="text" id="sns" value="인스타그램"/> 
+                <input type="text" id="sns" placeholder="링크를 입력하세요">
+                <input type="text" id="sns" placeholder="표기 ex) 인스타그램"/> 
             </div>
            
             <!-- <button> 인스타그램 </button> -->
         </div>
 
         <div class="photo-upload">
-            <label for="photos">사진</label>
-            <button>사진 업로드</button>
+            <label for="photos">사진
+                <span class="small-text">* 최대 8장</span>
+            </label>
+            <button type="button">사진업로드</button>
             <div class="photo-grid">
                 <div class="photo-item">
                     <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
+                    <i class="bi bi-x-circle"></i>
                 </div>
                 <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
+                    <img src="../img1.jpg" alt="">
+                    <i class="bi bi-x-circle"></i>
                 </div>
                 <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
+                    <img src="../img1.jpg" alt="">
+                    <i class="bi bi-x-circle"></i>
                 </div>
                 <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
+                    <img src="../img1.jpg" alt="">
+                    <i class="bi bi-x-circle"></i>
                 </div>
                 <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
+                    <img src="../img1.jpg" alt="">
+                    <i class="bi bi-x-circle"></i>
                 </div>
                 <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
-                </div>
-                <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
-                </div>
-                <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
-                </div>
-                <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
-                </div>
-                <div class="photo-item">
-                    <img src="../img1.jpg" alt="대표 사진">
-                    <div class="delete-icon"> X </div>
+                    <img src="../img1.jpg" alt="">
+                    <i class="bi bi-x-circle"></i>
                 </div>
             </div>
         </div>
 
-        <button class="submit-btn">등록하기</button>
+        <button class="submit-btn">등 록 하 기</button>
     </div>
 </body>
 </html>

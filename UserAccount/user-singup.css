@@ -228,44 +228,122 @@ body {
   .singup-container {
     background-color: white;
     padding: 20px;
-    
 }
 
 h2 {
     text-align: center;
     margin: 0;
+    margin-top: 2cap;
     margin-bottom: 50px;
+    font-size: 30px;
+    color: #444;
 }
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+.profile-img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 41%;
+  width: 25px;
+  height: 25px;
+  background-color: #2C348F;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.form-signup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-group {
     margin-bottom: 15px;
+    position: relative;
+    width: 400px;
+    text-align: center;
 }
+
 .form-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
+    text-align: left;
 }
+
 .form-group input, .form-group select {
     width: 100%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     box-sizing: border-box;
     margin-bottom: 10px;
 }
 
-.btn {
-    width: 100%;
+.btn-checkid {
+  width: 75px;
+  height: 30px;
+  padding: 0px 11px;
+  display: flex;
+  position: absolute;
+  top: 36%;
+  left: 80%;
+  border: 0;
+  border-radius: 5px;
+  /* color: red; */
+  /* background-color: blue; */
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #4551BF;
+  color: #fff;
+  font-size: 12px;
+}
+
+.btn-checkid:hover {
+  /* color: #555; */
+}
+
+.btn-signup {
+    width: 50%;
+    margin-top: 30px;
     padding: 10px;
-    background-color: #333;
     color: white;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background: rgb(146,169,255);
+    background: linear-gradient(207deg, rgba(146,169,255,1) 0%, rgba(53,58,148,1) 100%);
 }
 
-
 .password-group {
-    position: relative;
+  position: relative;
+}
+
+.password-group .invisible-icon1 {
+  position: absolute;
+  top: 45%;
+  left: 92%;
+}
+
+.password-group .invisible-icon2 {
+  position: absolute;
+  top: 45%;
+  left: 92%;
 }

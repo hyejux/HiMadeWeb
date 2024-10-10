@@ -223,47 +223,71 @@ body {
 
   /* --------------------------------------- */
   .user-login-cntainer {
-    margin: 140px auto;
+    margin: 100px auto;
     background-color: white;
-    padding: 20px;
 }
 
 .user-login-cntainer  form {
     margin: 50px;
-    margin-bottom: 100px;
+    margin-top: 100px;
+    /* margin-bottom: 100px; */
 }
 h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 30px;
+    color: #333;
 }
+
+.login-form {
+  text-align: center;
+}
+
 .form-group {
     margin-bottom: 30px;
+    position: relative;
 }
-.form-group label {
+
+/* .form-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
-}
+} */
 
 .form-group input {
-    width: 100%;
+    width: 75%;
+    height: 50px;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0px;
+    border-radius: 8px;
+    background-color: #EEE;
     box-sizing: border-box;
 }
 
-.btn {
-    width: 100%;
+.form-group .invisible-icon {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+}
+
+.btn-dologin {
+    width: 75%;
+    height: 60px;
+    margin-top: 50px;
     padding: 10px;
-    background-color: #555;
+    background: rgb(146,169,255);
+    background: linear-gradient(207deg, rgba(146,169,255,1) 0%, rgba(53,58,148,1) 100%);
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+}
+
+.findaccount {
+  text-align: center;
+  cursor: pointer;
 }
 
 .social-login {
@@ -273,8 +297,8 @@ h2 {
     margin: 20px 0;
 }
 .social-login img {
-    width: 50px;
-    height: 50px;
+    width: 60%;
+    height: 55px;
     cursor: pointer;
 }
 .divider {
@@ -294,13 +318,19 @@ h2 {
 .divider::after {
     margin-left: 10px;
 }
+
+.divider2 {
+  color: #ccc;
+}
+
 .footer-text {
     text-align: center;
     font-size: 15px;
-    color: #999;
+    color: #333;
     margin-top: 50px;
 }
 
 .footer-text span{
     text-decoration: underline;
+    cursor: pointer;
 }

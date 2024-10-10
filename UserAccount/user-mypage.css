@@ -232,6 +232,7 @@ h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 30px;
+    color: #333;
 }
 .profile-pic {
     display: flex;
@@ -247,10 +248,10 @@ h2 {
 .edit-icon {
     position: absolute;
     bottom: 0;
-    right: 30%;
-    width: 24px;
-    height: 24px;
-    background-color: rgb(78, 78, 78);
+    right: 41%;
+    width: 25px;
+    height: 25px;
+    background-color: #2C348F;
     border-radius: 50%;
     color: white;
     display: flex;
@@ -258,16 +259,25 @@ h2 {
     justify-content: center;
     cursor: pointer;
 }
+
+.user-mypage-form {
+  text-align: center;
+}
+
 .form-group {
     margin-bottom: 30px;
 }
+
+
 .form-group label {
     display: block;
     font-size: 14px;
     margin-bottom: 5px;
+    text-align: left;
+    padding-left: 20%;
 }
 .form-group input, .form-group select {
-    width: 100%;
+    width: 60%;
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -276,11 +286,15 @@ h2 {
 }
 .btn-group {
     display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .btn {
-    width: 48%;
+    width: 40%;
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -288,9 +302,25 @@ h2 {
     cursor: pointer;
 }
 .btn.cancel {
-    background-color: #ccc;
+    background-color: #E5E5EA;
 }
 .btn.update {
-    background-color: #333;
+    background-color: #2C348F;
     color: white;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-group .invisible-icon1 {
+  position: absolute;
+  top: 50%;
+  left:75%;
+}
+
+.password-group .invisible-icon2 {
+  position: absolute;
+  top: 50%;
+  left:75%;
 }
