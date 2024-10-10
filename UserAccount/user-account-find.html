@@ -36,23 +36,27 @@
             
                 <form id="account-form">
                     <div class="form-group" id="id-form-group">
-                        <!-- <label for="id">아이디</label> -->
-                        <input type="text" id="id" placeholder="아이디*">
+                        <input type="text" id="id" placeholder=" " required>
+                        <label for="id">아이디</label>
+                        <div class="highlight"></div>
+                        <div class="bar"></div>
                     </div>
                     <div class="form-group" id="name-form-group">
-                        <!-- <label for="name">이름</label> -->
-                        <input type="text" id="name" placeholder="이름*">
+                        <input type="text" id="name" placeholder=" " required>
+                        <label for="name">이름</label>
+                        <div class="highlight"></div>
+                        <div class="bar"></div>
                     </div>
                     <div class="form-group" id="phone-form-group">
-                        <!-- <label for="phone">연락처</label> -->
-                        <input type="text" id="phone-number" placeholder="연락처*">
-                    </div>
+                        <input type="text" id="phone-number" placeholder=" " required>
+                        <label for="phone-number">연락처</label>
+                        <div class="highlight"></div>
+                        <div class="bar"></div>
+                    </div>                    
                     <button type="button" class="btn-findaccount" id="btn-findaccount">아이디 찾기</button>
                 </form>
             </div>
             
-            
-    
     
         <div class="user-bottom-nav">
             <a href="#">
@@ -83,17 +87,59 @@
             document.getElementById("name-form-group").style.display = "block"; // 이름 필드 보이기
             document.getElementById("phone-form-group").style.display = "block"; // 연락처 필드 보이기
             document.getElementById("btn-findaccount").innerText = "아이디 찾기"; // 버튼 텍스트 변경
+    
+            // 버튼 색상 변경
+            document.getElementById("find-id-btn").style.backgroundColor = "#4653C0";
+            document.getElementById("find-id-btn").style.color = "#fff";
+            document.getElementById("find-pw-btn").style.backgroundColor = "#E5E5EA";
+            document.getElementById("find-pw-btn").style.color = "#000";
+    
+            // 입력 필드 초기화
+            clearInputFields();
         }
-
+    
         function showPwForm() {
             document.getElementById("id-form-group").style.display = "block";
             document.getElementById("name-form-group").style.display = "block";
             document.getElementById("phone-form-group").style.display = "block";
             document.getElementById("btn-findaccount").innerText = "비밀번호 찾기";
+    
+            // 버튼 색상 변경
+            document.getElementById("find-pw-btn").style.backgroundColor = "#4653C0";
+            document.getElementById("find-pw-btn").style.color = "#fff";
+            document.getElementById("find-id-btn").style.backgroundColor = "#E5E5EA";
+            document.getElementById("find-id-btn").style.color = "#000";
+    
+            // 입력 필드 초기화
+            clearInputFields();
         }
-
+    
+        // 입력 필드를 초기화하는 함수
+        function clearInputFields() {
+            document.getElementById("id").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("phone-number").value = "";
+        }
+    
         document.addEventListener("DOMContentLoaded", showIdForm);
     </script>
+    
   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var inputs = document.querySelectorAll("input");
+
+            inputs.forEach(function (input) {
+                input.addEventListener("blur", function () {
+                    if (input.value) {
+                        input.classList.add("used");
+                    } else {
+                        input.classList.remove("used");
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
