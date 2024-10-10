@@ -51,7 +51,7 @@ body {
 .logo {
   color: transparent;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to right, #94b6e9, #56c9ef, #33d8d7, #73e0a7, #bfdf77);
+  background-image: linear-gradient(207deg, rgba(146, 169, 255, 1) 0%, rgba(53, 58, 148, 1) 100%);
   font-family: 'ghanachoco';
   font-size: 25px;
   margin-bottom: 20px;
