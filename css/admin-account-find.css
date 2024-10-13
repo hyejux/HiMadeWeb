@@ -96,12 +96,12 @@ body {
 }
 
 .login-container> button {
-    background-color: #727272;
-    border : 1px solid #ddd;
-    border-radius: 10px;
-    width: 50%;
-    height: 40px;
-    font-size: 18px;
+    background-color: rgba(79, 109, 218, 0.6);
+    border : 0px solid #ddd;
+    border-radius: 3px;
+    width: 30%;
+    height: 30px;
+    font-size: 15px;
     margin-bottom: 30px;
     font-weight: bold;
     color: #ddd;
@@ -126,7 +126,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .account-find-box > button {
@@ -136,14 +135,15 @@ body {
     /* height: 100%; */
     font-weight: bold;
     font-size: 16px;
-    border : 1px solid #ddd;
+    border : 0px solid #ddd;
+    border-bottom: 2px solid rgba(79, 109, 218, 0.6);
     background-color: #fff;
     
 }
 
 .account-find-box > button:nth-child(1) {
-    background-color: #ddd;
-    border: 1px solid #ddd;
+    background-color: rgba(79, 109, 218, 0.3);
+    /* border: 1px solid #ddd; */
 }
 
 .logo {
