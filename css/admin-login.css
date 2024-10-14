@@ -98,9 +98,15 @@ body {
 
 
 .login-title {
-    font-size: 30px;
+    /* font-size: 30px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
+
+    color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #94b6e9, #56c9ef, #33d8d7, #73e0a7, #bfdf77);
+    font-family: 'ghanachoco';
+    font-size: 45px;
 }
 
 .login-box {
