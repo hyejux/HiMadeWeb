@@ -4,13 +4,19 @@
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
-  @font-face {
+}
+@font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
-  }
+}
+@font-face {
+    font-family: 'TTLaundryGothicB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 
 body {
@@ -31,24 +37,60 @@ body {
 
 .step-indicator {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* 왼쪽 정렬 */
     margin-bottom: 30px;
+    background-color: #fff; /* 배경색 추가 */
+    border-radius: 10px; /* 둥근 모서리 추가 */
 }
 
 .step {
     text-align: center;
+    position: relative; /* 위치 설정 */
+    margin-right: 30px; /* 단계 간의 간격을 추가 */
+    width: 100%;
 }
 
-.step .icon {
-    width: 50px;
-    height: 50px;
-    background-color: #b8b8b8;
-    border-radius: 50%;
-    display: inline-block;
+.icon {
+    width: 100%;
+    height: 60px;
+    /* background-color: #cccccc; */
+    background-color: rgba(79, 109, 218, 0.3);;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #727272;
 }
 
 .step.active .icon {
-    background-color: #727272;
+    /* background-color: #727272; */
+    background-color: rgb(79, 109, 218);
+    color: white;
+}
+
+.icon p {
+    margin: 0;
+    text-align: center;
+    font-size: small;
+}
+
+.step:last-child {
+    margin-right: 0; /* 마지막 단계의 오른쪽 마진을 0으로 설정하여 공간 없애기 */
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 30px; /* 연결선 너비 */
+    height: 2px; /* 연결선 높이 */
+    background-color: rgba(79, 109, 218, 0.3); /* 기본 연결선 색상 */
+    transform: translateY(-50%); /* 수직 중앙 정렬 */
+}
+
+.step:last-child::after {
+    display: none; /* 마지막 단계에선 연결선 숨김 */
 }
 
 .admin-singup-complete-container{
@@ -63,11 +105,13 @@ body {
     font-size: 40px;
     margin-bottom: 30px;
     margin-top: 100px;
+    
 }
 
 .singup-complete-title .logo {
     display: block;
     margin-bottom: 30px;
+    
 }
 
 .singup-complete-title .bi {
@@ -90,32 +134,41 @@ body {
 }
 
 .singup-complete-content > div:nth-child(1) {
-    color : red;
+    color : rgb(199, 4, 4);
     margin-bottom: 20px;
     
 }
+
+.singup-complete-content > div:nth-child(1) span{
+    color : rgb(9, 9, 206);
+    margin-bottom: 10px;
+}
+
 .singup-complete-content > div:nth-child(2) {
-    color : #464646;
+    color : #999;
     margin-bottom: 10px;
     font-size: 15px;
     
 }
 
-.singup-complete-content > div:nth-child(1) span{
-    color : blue;
-    margin-bottom: 10px;
+.singup-complete-content span {
+    color: black;
+}
+
+.singup-complete-content a:hover {
+    color: rgb(79, 109, 218);
 }
 
 .login-go-btn {
     display: block;
     /* width: 100%; */
     /* text-align: center; */
-    padding: 15px;
+    padding: 10px 15px;
     background-color: #727272;
     color: white;
     text-align: center;
-    font-size: 18px;
-    border-radius: 5px;
+    font-size: 13px;
+    border-radius: 3px;
     margin-top: 20px;
     cursor: pointer;
     border: none;
