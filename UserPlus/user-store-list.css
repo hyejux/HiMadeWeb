@@ -235,7 +235,7 @@ body {
 .store-search-bar {
   margin: 30px;
   border: 2px solid #2C348F;
-  border-radius: 40px;
+  border-radius: 20px;
   text-align: center;
   display: flex;
   padding: 10px;
