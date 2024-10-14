@@ -8,6 +8,96 @@
   <link rel="stylesheet" type="text/css" href="../css/admin-reserve.css"/>
   <link rel="stylesheet" type="text/css" href="../css/admin-reserve-detail.css"/>
   <link rel="stylesheet" type="text/css" href="../css/admin-reserve-mange.css"/>
+  <style>
+
+
+.management-container {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.top-controls input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.top-controls select {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.add-btn, .report-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.add-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.report-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.management-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.management-table thead {
+  background-color: #f5f5f5;
+}
+
+.management-table th, .management-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.management-table th {
+  font-weight: bold;
+}
+
+.management-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.flight-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+  </style>
 </head>
 <body>
 
@@ -48,6 +138,94 @@
           </div>
       </div>
 
+      <div class="management-container">
+        <div class="management-header">
+            <h2>Management</h2>
+            <div class="top-controls">
+                <input type="text" placeholder="Search" />
+                <select>
+                    <option value="all">All passengers</option>
+                </select>
+                <button class="add-btn">Add New Passenger</button>
+                <button class="report-btn">Create Report</button>
+            </div>
+        </div>
+    
+        <table class="management-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Passenger Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Carrier</th>
+                    <th>Flight #</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Gate</th>
+                    <th>Menu</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" /></td>
+                    <td><img src="../img1.jpg" width="50px" style="border-radius: 100%;"/> Clara Smith</td>
+                    <td>tranthuy.nute@...</td>
+                    <td>(319) 555-0115</td>
+                    <td>ATLANTA JET Airlines</td>
+                    <td><button class="flight-btn">#5028</button></td>
+                    <td>09/18/23</td>
+                    <td>08:40</td>
+                    <td>18F</td>
+                    <td>RDU</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>Floyd Miles</td>
+                    <td>vuahiuthoungnt@...</td>
+                    <td>(405) 555-0128</td>
+                    <td>PEGASUS Airlines</td>
+                    <td><button class="flight-btn">#5028</button></td>
+                    <td>09/18/23</td>
+                    <td>09:45</td>
+                    <td>1D</td>
+                    <td>RDU</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>Jerome Bell</td>
+                    <td>manhhackit08@...</td>
+                    <td>(252) 555-0126</td>
+                    <td>UIA Airlines</td>
+                    <td><button class="flight-btn">#5028</button></td>
+                    <td>09/18/23</td>
+                    <td>12:37</td>
+                    <td>16A</td>
+                    <td>RDU</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" /></td>
+                    <td>Ronald Richards</td>
+                    <td>binhan628@...</td>
+                    <td>(208) 555-0112</td>
+                    <td>MONTANA Airways</td>
+                    <td><button class="flight-btn">#5028</button></td>
+                    <td>09/18/23</td>
+                    <td>16:45</td>
+                    <td>2E</td>
+                    <td>RDU</td>
+                </tr>
+                <!-- 추가 승객 데이터 행을 여기에 삽입 -->
+            </tbody>
+        </table>
+    
+        <div class="pagination">
+            <span>Rows per page: 14</span>
+            <span>1-4 of 4</span>
+            <button>&lt;</button>
+            <button>&gt;</button>
+        </div>
+    </div>
 
 
   </div>
