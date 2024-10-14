@@ -96,6 +96,18 @@ body {
 
 .user-main-content {
   margin-bottom: 30px;
+  position: relative;
+}
+
+.last-content {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.user-main-content h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 5px;
 }
 
 .user-main-content>.bi {
@@ -113,12 +125,11 @@ body {
 .store-search-bar {
   margin: 30px 30px 50px 30px;
   border: 2px solid #2C348F;
-  border-radius: 40px;
+  border-radius: 20px;
   text-align: center;
   display: flex;
   padding: 10px;
   align-items: baseline;
-  position: relative;
 }
 
 .store-search-bar img {
@@ -139,14 +150,10 @@ body {
   margin: 10px;
 }
 
-/* ------- */
-
 .user-main-list-wrap {
   display: flex;
   overflow-x: auto;
 }
-
-
 
 .user-main-list-container {
   width: 185px;
@@ -162,21 +169,71 @@ body {
   position: relative;
 }
 
-.user-category-menu-img>.bi {
+.user-category-menu-img>.bookmark-btn {
   position: absolute;
-  font-size: 25px;
-  color: #fff;
+  font-size: 20px;
+  color: #ff4d4d;
   top: 5px;
   left: 150px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .user-category-menu img {
   width: 100%;
   height: 100%;
   background-size: cover;
+  border-radius: 10px;
 }
 
+.store-title-1 {
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+}
 
+.store-category {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.store-distance {
+  font-size: 16px;
+  text-align: center;
+  color: #bbb;
+}
+
+.store-title-2 {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.store-review {
+  color: #FFD700;
+  font-size: 16px;
+}
+
+.store-option {
+  font-size: 12px;
+}
+
+.event-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(255, 0, 0, 0.7);
+  /* background-color: rgba(0, 0, 139, 0.7);  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
 /* 모바일 스크롤 스타일 */
 .user-main-list-wrap::-webkit-scrollbar {
@@ -209,7 +266,7 @@ body {
   .nav-button {
     position: absolute;
     /* 부모 요소 내에서 고정 */
-    top: 325%;
+    top: 45%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -220,14 +277,13 @@ body {
   }
 
   .nav-button.left {
-    left: -30px;
+    left: 0;
     /* 부모 요소의 왼쪽에 고정 */
   }
 
   .nav-button.right {
-    right: -30px;
+    right: 0;
     /* 부모 요소의 오른쪽에 고정 */
   }
 }
-
 
